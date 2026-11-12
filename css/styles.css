@@ -272,6 +272,68 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 400; line-height: 1.
 .stat p { color: var(--muted-dark); font-weight: 600; font-size: .95rem; }
 
 /* ==========================================================================
+   YAHYA — FOUNDER
+   ========================================================================== */
+.yahya {
+  background: var(--ivory); color: var(--ink);
+  text-align: center;
+  padding-top: 40px;
+}
+.yahya-inner {
+  display: flex; flex-direction: column; align-items: center; gap: 18px;
+  max-width: 760px;
+}
+.yahya h2 { font-size: clamp(1.9rem, 4vw, 3rem); }
+.yahya-namesub {
+  font-family: var(--font-display); font-style: italic;
+  color: var(--gold-deep); font-size: 1.1rem; margin-top: -10px;
+}
+/* in English mode the subtitle is Persian — upright, in Vazirmatn */
+html[lang="en"] .yahya-namesub { font-family: "Vazirmatn", Tahoma, sans-serif; font-style: normal; }
+.yahya-bio p { color: #4c4436; max-width: 62ch; margin: 0 auto 14px; }
+.yahya-bio p:last-child { margin-bottom: 10px; }
+.yahya-phone { margin-top: 10px; font-size: 1.05rem; direction: ltr; }
+.phone-icon { width: 18px; height: 18px; }
+
+/* photo carousel — matted frame look */
+.carousel {
+  position: relative; width: min(420px, 84vw);
+  margin-bottom: 22px;
+  background: #fff; border: 1px solid var(--ivory-3); border-radius: 22px;
+  padding: 12px;
+  box-shadow: 0 28px 60px rgba(22, 19, 14, .18);
+}
+.carousel-frame { position: relative; aspect-ratio: 3 / 4; border-radius: 14px; overflow: hidden; background: var(--ink-2); }
+.carousel-frame img {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover;
+  opacity: 0; transition: opacity 1.2s ease;
+}
+.carousel-frame img.active { opacity: 1; }
+.carousel-dots {
+  position: absolute; bottom: 26px; left: 50%; transform: translateX(-50%);
+  display: flex; gap: 9px; z-index: 2;
+}
+.carousel-dot {
+  width: 9px; height: 9px; border-radius: 50%; padding: 0;
+  background: rgba(244, 237, 221, .6);
+  transition: background .3s, transform .3s;
+}
+.carousel-dot:hover { background: var(--ivory); }
+.carousel-dot.active { background: var(--gold-2); transform: scale(1.3); }
+.yahya-badge {
+  position: absolute; top: -20px; inset-inline-end: -20px; z-index: 3;
+  width: 96px; height: 96px; border-radius: 50%;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  background: linear-gradient(135deg, var(--gold-2), var(--gold));
+  color: var(--ink);
+  box-shadow: 0 14px 30px rgba(201, 162, 39, .4), 0 0 0 6px var(--ivory);
+  transform: rotate(6deg);
+}
+.badge-num { font-family: var(--font-display); font-size: 1.75rem; font-weight: 500; line-height: 1; }
+.badge-label { font-size: .72rem; font-weight: 800; margin-top: 2px; }
+
+/* ==========================================================================
    COLLECTION
    ========================================================================== */
 .collection {

@@ -11,9 +11,9 @@
    ========================================================================== */
 
 const CONFIG = {
-  phoneDisplay: "+1 (555) 123-4567",          // shown on the site
-  phoneDial: "+15551234567",                  // used for tel: links
-  whatsappNumber: "15551234567",              // digits only, incl. country code — no +, spaces or dashes
+  phoneDisplay: "+98123989227",               // shown on the site
+  phoneDial: "+98123989227",                  // used for tel: links
+  whatsappNumber: "98123989227",              // digits only, incl. country code — no +, spaces or dashes
   email: "hello@yahyadrapery.com",
   en: {
     address: "Shop 14, Textile Market, Main Bazaar Road",
@@ -309,6 +309,28 @@ function initLangToggle() {
   });
 }
 
+/* ---------- Founder photo carousel (auto-swipe every 10 s) ---------- */
+function initCarousel() {
+  const carousel = document.getElementById("yahya-carousel");
+  const imgs = carousel.querySelectorAll(".carousel-frame img");
+  const dots = carousel.querySelectorAll(".carousel-dot");
+  let index = 0;
+  let timer = null;
+
+  const show = (n) => {
+    index = (n + imgs.length) % imgs.length;
+    imgs.forEach((img, k) => img.classList.toggle("active", k === index));
+    dots.forEach((dot, k) => dot.classList.toggle("active", k === index));
+  };
+  const play = () => { timer = setInterval(() => show(index + 1), 10000); };
+  const restart = () => { clearInterval(timer); play(); };
+
+  dots.forEach((dot, k) => dot.addEventListener("click", () => { show(k); restart(); }));
+  carousel.addEventListener("mouseenter", () => clearInterval(timer));
+  carousel.addEventListener("mouseleave", play);
+  play();
+}
+
 /* ---------- Scroll reveal ---------- */
 function initReveal() {
   const io = new IntersectionObserver(
@@ -411,6 +433,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initLightbox();
   initNav();
   initLangToggle();
+  initCarousel();
   initReveal();
   initCounters();
   initNotifyForm();
