@@ -226,11 +226,12 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 400; line-height: 1.
   border-block: 1px solid rgba(22, 19, 14, .25);
 }
 .marquee-track {
-  display: flex; align-items: center; gap: 34px; width: max-content;
+  display: flex; width: max-content;
   animation: marquee 36s linear infinite;
   font-family: var(--font-display); font-size: 1.15rem; font-style: italic;
   color: var(--ink);
 }
+.marquee-half { display: flex; align-items: center; gap: 34px; padding-right: 34px; }
 .marquee-track .dot { font-size: .7rem; font-style: normal; }
 .marquee:hover .marquee-track { animation-play-state: paused; }
 @keyframes marquee { to { transform: translateX(-50%); } }
