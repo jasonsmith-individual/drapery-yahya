@@ -1,0 +1,216 @@
+/* ==========================================================================
+   YAHYA DRAPERY — i18n.js
+   ==========================================================================
+   ✎ OWNER EDIT GUIDE — all site text lives here, in both languages.
+   - Edit/add keys in I18N.en (English) and I18N.fa (Farsi) — keep both in
+     sync. Text may contain simple markup (<em>, <br>).
+   - Fabric names/descriptions live in the FABRICS list in script.js
+     (each fabric has an English name/desc/meta and a `fa:` block).
+   ========================================================================== */
+
+const I18N = {
+  en: {
+    "meta.title": "Yahya Drapery — Fine Fabrics by the Metre & the Bolt",
+    "meta.desc": "Yahya Drapery — a family fabric house. Silk, velvet, linen and cotton by the metre and the bolt. Custom drapes, consultations and alterations.",
+    "skip.link": "Skip to content",
+    "brand": "Yahya <em>Drapery</em>",
+    "nav.menu": "Open menu",
+    "nav.collection": "Collection",
+    "nav.bolt": "By the Bolt",
+    "nav.services": "Services",
+    "nav.visit": "Visit Us",
+    "nav.notify": "Notify Me",
+
+    "hero.eyebrow": "Family fabric house · est. 1998",
+    "hero.h1": 'Fine fabrics, by the <em>metre</em><br>&amp; the <em>bolt</em>.',
+    "hero.lede": "Silk, velvet, linen and cotton — curated for homes, tailors and the trade. Wander the shelves online today; the counter opens soon.",
+    "hero.cta1": "Browse the Collection",
+    "hero.cta2": "Visit the Shop",
+    "hero.scroll": "scroll",
+
+    "mq.silk": "Silk", "mq.velvet": "Velvet", "mq.linen": "Linen", "mq.cotton": "Cotton",
+    "mq.brocade": "Brocade", "mq.voile": "Voile", "mq.jacquard": "Jacquard",
+    "mq.tweed": "Tweed", "mq.blackout": "Blackout", "mq.satin": "Satin",
+
+    "about.eyebrow": "Our story",
+    "about.h2": "Three generations<br>behind the counter.",
+    "about.p1": "What began as a single market stall is now a fabric house the whole bazaar knows. We buy directly from mills we've traded with for decades — which is why our shelves hold cloth you won't find in the department stores.",
+    "about.p2": "Every bolt is inspected by hand before it earns a place on the shelf. If we wouldn't hang it in our own homes, we don't sell it in yours.",
+
+    "stats.s1": "fabric lines in stock",
+    "stats.s2": "bolts in the warehouse",
+    "stats.s3": "years in the bazaar",
+
+    "col.eyebrow": "The shelves",
+    "col.h2": "The Collection",
+    "col.sub": "A taste of what's on the shelves this season. Swatches shown as studio colours — the real cloth is better.",
+    "col.note": "Prices at the counter &amp; coming online soon · Full bolts available on most lines",
+    "noscript.text": "Enable JavaScript to browse the collection — or simply visit the shop; it's better in person anyway.",
+
+    "filter.all": "All", "filter.silk": "Silk", "filter.cotton": "Cotton", "filter.linen": "Linen",
+    "filter.velvet": "Velvet", "filter.drapery": "Drapery", "filter.upholstery": "Upholstery",
+
+    "bolt.eyebrow": "For the trade",
+    "bolt.h2": "Buy the bolt,<br>not just the metre.",
+    "bolt.p": "Tailors, upholsterers and curtain-makers: we warehouse over a thousand bolts and sell them whole, by the half-bolt, or cut to your exact metreage.",
+    "bolt.li1": "Trade pricing on full bolts",
+    "bolt.li2": "Reserve stock &amp; collect when you're ready",
+    "bolt.li3": "Delivery across the bazaar &amp; beyond",
+    "bolt.cta": "Bolt ordering online soon → Notify&nbsp;me",
+
+    "svc.eyebrow": "What we do",
+    "svc.h2": "More than a fabric shop.",
+    "svc.1t": "Custom curtains &amp; drapes",
+    "svc.1p": "Made-to-measure headings, linings and hems — measured in your home, stitched in our workroom, hung by our hands.",
+    "svc.2t": "Fabric consultation",
+    "svc.2p": "Bring a photo or a cushion cover; we'll pull swatches that suit your light, your room and your budget — over tea, never pressure.",
+    "svc.3t": "Alterations &amp; restyling",
+    "svc.3p": "Hems, relinings and restyles that give good fabric a second life — your grandmother's drapes deserve better than a cupboard.",
+
+    "visit.eyebrow": "The shop",
+    "visit.h2": "The shop is where<br>the fabric is.",
+    "visit.p": "Come feel the cloth. The kettle is usually on and there's always a new bolt being opened.",
+    "visit.addr": "Address",
+    "visit.hours": "Hours",
+    "visit.contact": "Contact",
+    "visit.wa": "Chat on WhatsApp",
+    "map.note1": "In the heart of the Textile Market",
+    "map.note2": "an interactive map arrives with the online counter",
+
+    "notify.eyebrow": "Coming soon",
+    "notify.h2": "The online counter is opening.",
+    "notify.p": "Soon you'll browse every shelf and order by the metre or the bolt — delivered to your door. Leave an email and be first through the door when we open.",
+    "notify.btn": "Notify me",
+    "notify.placeholder": "you@example.com",
+    "notify.hint": "No spam — one email when the shop opens, that's it.",
+
+    "footer.p": "Woven with care since 1998.<br>Cloth for homes, tailors and the trade.",
+    "footer.explore": "Explore",
+    "footer.contact": "Contact",
+    "footer.wa": "WhatsApp",
+    "footer.base1": "©",
+    "footer.base2": "Yahya Drapery · Online counter opening soon",
+
+    "lb.close": "Close",
+    "lb.ask": "Ask about this fabric",
+    "lb.visit": "Visit the shop",
+
+    "ui.badge": "Full bolts",
+    "ui.cardcta": "View &amp; ask",
+    "ui.lbbolts": "· full bolts available",
+    "ui.aria.card": "View {name}",
+    "ui.wa.prefill": "Hello Yahya Drapery! I have a question about your fabrics.",
+    "ui.wa.fabric": "Hello Yahya Drapery! I'm interested in the {name}. Is it in stock?",
+    "ui.toast.invalid": "Please enter a valid email address.",
+    "ui.toast.thanks": "Thank you — you'll be first through the door.",
+    "ui.btn.done": "You're on the list ✓",
+  },
+
+  fa: {
+    "meta.title": "پارچه‌فروشی یحیی — پارچه‌های نفیس، متری و تکه",
+    "meta.desc": "پارچه‌فروشی یحیی — خانه‌ی پارچه‌ی خانوادگی. ابریشم، مخمل، کتان و پنبه، متری و تکه. خیاطی پرده، مشاوره و اصلاح.",
+    "skip.link": "رفتن به محتوا",
+    "brand": "پارچه‌فروشی <em>یحیی</em>",
+    "nav.menu": "باز کردن منو",
+    "nav.collection": "مجموعه",
+    "nav.bolt": "خرید تکه",
+    "nav.services": "خدمات",
+    "nav.visit": "مغازه",
+    "nav.notify": "خبرم کن",
+
+    "hero.eyebrow": "خانه‌ی پارچه‌ی خانوادگی · از ۱۳۷۷",
+    "hero.h1": "پارچه‌های نفیس، <em>متری</em><br>و <em>تکه</em>.",
+    "hero.lede": "ابریشم، مخمل، کتان و پنبه — انتخاب‌شده برای خانه‌ها، خیاط‌ها و صنف. امروز قفسه‌ها را آنلاین ببینید؛ پیش‌خوان آنلاین به‌زودی افتتاح می‌شود.",
+    "hero.cta1": "دیدن مجموعه",
+    "hero.cta2": "سر زدن به مغازه",
+    "hero.scroll": "اسکرول",
+
+    "mq.silk": "ابریشم", "mq.velvet": "مخمل", "mq.linen": "کتان", "mq.cotton": "پنبه",
+    "mq.brocade": "زربفت", "mq.voile": "تور", "mq.jacquard": "ژاکارد",
+    "mq.tweed": "توئید", "mq.blackout": "بلک‌اوت", "mq.satin": "ساتان",
+
+    "about.eyebrow": "داستان ما",
+    "about.h2": "سه نسل<br>پشت این پیش‌خوان.",
+    "about.p1": "آنچه با یک دست‌انداز ساده در بازار شروع شد، امروز پارچه‌خانه‌ای است که تمام بازار آن را می‌شناسد. ما مستقیم از کارخانه‌هایی می‌خریم که دهه‌هاست با آن‌ها کار می‌کنیم — برای همین قفسه‌های ما پارچه‌هایی دارد که در فروشگاه‌های بزرگ پیدا نمی‌کنید.",
+    "about.p2": "هر تکه پیش از آنکه جای خود را روی قفسه باز کند، با دست بازرسی می‌شود. اگر پارچه‌ای را برای خانه‌ی خودمان نمی‌خواهیم، برای خانه‌ی شما هم نمی‌فروشیم.",
+
+    "stats.s1": "نوع پارچه‌ی موجود",
+    "stats.s2": "تکه در انبار",
+    "stats.s3": "سال حضور در بازار",
+
+    "col.eyebrow": "قفسه‌ها",
+    "col.h2": "مجموعه‌ی پارچه‌ها",
+    "col.sub": "طعمی از آنچه این فصل روی قفسه‌هاست. رنگ‌های نشان‌داده‌شده استودیویی‌اند؛ خودِ پارچه از این هم قشنگ‌تر است.",
+    "col.note": "قیمت‌ها در پیش‌خوان · به‌زودی آنلاین · اکثر پارچه‌ها به‌صورت تکه موجود است",
+    "noscript.text": "برای دیدن مجموعه، جاوااسکریپت را فعال کنید — یا ساده‌تر: به خود مغازه سر بزنید؛ آنجا از این هم بهتر است.",
+
+    "filter.all": "همه", "filter.silk": "ابریشم", "filter.cotton": "پنبه", "filter.linen": "کتان",
+    "filter.velvet": "مخمل", "filter.drapery": "پرده‌ای", "filter.upholstery": "مبل‌پوش",
+
+    "bolt.eyebrow": "فروش عمده",
+    "bolt.h2": "تکه بخرید،<br>نه فقط متری.",
+    "bolt.p": "خیاط‌ها، مبل‌دوزها و پرده‌دوزها: بیش از هزار تکه در انبار داریم و می‌فروشیم — تمام‌تکه، نیم‌تکه، یا برش دقیق به مترِ دلخواه شما.",
+    "bolt.li1": "قیمت صنفی برای تکه‌های کامل",
+    "bolt.li2": "رزرو پارچه و تحویل هر وقت که آماده باشید",
+    "bolt.li3": "ارسال به سراسر بازار و شهر",
+    "bolt.cta": "سفارش آنلاین تکه به‌زودی ← خبرم کن",
+
+    "svc.eyebrow": "کارهای ما",
+    "svc.h2": "فقط یک پارچه‌فروشی نیستیم.",
+    "svc.1t": "خیاطی پرده‌ی سفارشی",
+    "svc.1p": "سرخی، لایی و لبه به اندازه‌ی فضای شما — اندازه‌گیری در خانه‌ی شما، دوخت در کارگاه خودمان، نصب با دست‌های خودمان.",
+    "svc.2t": "مشاوره‌ی انتخاب پارچه",
+    "svc.2p": "یک عکس یا روبالشی بیاورید؛ ما پارچه‌هایی انتخاب می‌کنیم که با نور، فضا و بودجه‌ی شما بخواند — با یک چای تازه، بدون هیچ اصراری.",
+    "svc.3t": "اصلاح و بازطراحی",
+    "svc.3p": "لبه‌دوزی، تعویض لایی و بازطراحی‌هایی که به پارچه‌ی خوب زندگی دومی می‌دهد — پرده‌های مادربزرگ لایق انبار ماندن نیستند.",
+
+    "visit.eyebrow": "مغازه",
+    "visit.h2": "پارچه را باید<br>از نزدیک دید.",
+    "visit.p": "بیایید پارچه‌ها را لمس کنید. کتری معمولاً روی گاز است و همیشه تکه‌ی تازه‌ای در حال باز شدن است.",
+    "visit.addr": "آدرس",
+    "visit.hours": "ساعت کاری",
+    "visit.contact": "تماس",
+    "visit.wa": "گفتگو در واتساپ",
+    "map.note1": "در قلب بازار پارچه",
+    "map.note2": "نقشه‌ی تعاملی همراه افتتاح پیش‌خوان آنلاین می‌رسد",
+
+    "notify.eyebrow": "به‌زودی",
+    "notify.h2": "پیش‌خوان آنلاین در حال افتتاح است.",
+    "notify.p": "به‌زودی می‌توانید تمام قفسه‌ها را ببینید و متری یا تکه سفارش بدهید — با ارسال تا در خانه. ایمیلتان را بجا بگذارید تا اولین نفرها از افتتاح باخبر شوید.",
+    "notify.btn": "خبرم کن",
+    "notify.placeholder": "you@example.com",
+    "notify.hint": "بدون اسپم — فقط یک ایمیل هنگام افتتاح، همین.",
+
+    "footer.p": "از ۱۳۷۷ با وسواس بافته می‌شود.<br>پارچه برای خانه‌ها، خیاط‌ها و صنف.",
+    "footer.explore": "دسترسی",
+    "footer.contact": "تماس",
+    "footer.wa": "واتساپ",
+    "footer.base1": "©",
+    "footer.base2": "پارچه‌فروشی یحیی · پیش‌خوان آنلاین به‌زودی",
+
+    "lb.close": "بستن",
+    "lb.ask": "استعلام قیمت و موجودی",
+    "lb.visit": "دیدن مغازه",
+
+    "ui.badge": "موجود به تکه",
+    "ui.cardcta": "مشاهده",
+    "ui.lbbolts": "· موجود به تکه",
+    "ui.aria.card": "دیدن {name}",
+    "ui.wa.prefill": "سلام پارچه‌فروشی یحیی! درباره‌ی پارچه‌هایتان سوالی دارم.",
+    "ui.wa.fabric": "سلام پارچه‌فروشی یحیی! دنبال {name} هستم. موجود است؟",
+    "ui.toast.invalid": "لطفاً یک ایمیل معتبر وارد کنید.",
+    "ui.toast.thanks": "ممنون — خبر افتتاح را اول شما خواهید شنید.",
+    "ui.btn.done": "ثبت شد ✓",
+  },
+};
+
+/* Category display names (filters, card chips, lightbox) */
+const CATEGORIES = {
+  all:        { en: "All",        fa: "همه" },
+  silk:       { en: "Silk",       fa: "ابریشم" },
+  cotton:     { en: "Cotton",     fa: "پنبه" },
+  linen:      { en: "Linen",      fa: "کتان" },
+  velvet:     { en: "Velvet",     fa: "مخمل" },
+  drapery:    { en: "Drapery",    fa: "پرده‌ای" },
+  upholstery: { en: "Upholstery", fa: "مبل‌پوش" },
+};

@@ -154,6 +154,19 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 400; line-height: 1.
 .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
 .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 
+.nav-controls { display: flex; align-items: center; gap: 10px; }
+.lang-toggle {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 9px 15px; border-radius: 999px;
+  border: 1px solid rgba(244, 237, 221, .22);
+  font-size: .8rem; font-weight: 800; color: var(--muted-light);
+  transition: border-color .25s;
+}
+.lang-toggle:hover { border-color: var(--gold-2); }
+.lang-toggle .sep { opacity: .35; font-weight: 400; }
+.lang-toggle [data-lang-opt] { transition: color .25s; }
+.lang-toggle [data-lang-opt].active { color: var(--gold-2); }
+
 /* ==========================================================================
    HERO
    ========================================================================== */
@@ -485,7 +498,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 400; line-height: 1.
   font-family: var(--font-display); font-style: italic; font-size: 1.05rem; color: var(--ivory);
   display: flex; flex-direction: column; gap: 3px;
 }
-.map-note span { font-family: var(--font-body); font-style: normal; font-size: .78rem; color: var(--muted-light); }
+.map-note .map-note-sub { font-family: var(--font-body); font-style: normal; font-size: .78rem; color: var(--muted-light); }
 
 /* ==========================================================================
    NOTIFY
@@ -624,3 +637,39 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 400; line-height: 1.
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* ==========================================================================
+   FARSI (RTL) MODE — Vazirmatn font, mirrored layout
+   ========================================================================== */
+html[lang="fa"] body { font-family: "Vazirmatn", Tahoma, sans-serif; }
+html[lang="fa"] h1, html[lang="fa"] h2, html[lang="fa"] h3,
+html[lang="fa"] .brand-name, html[lang="fa"] .card-name, html[lang="fa"] .marquee-track,
+html[lang="fa"] .stat-num, html[lang="fa"] .map-note, html[lang="fa"] .card-cta {
+  font-family: "Vazirmatn", Tahoma, sans-serif;
+}
+/* letter-spacing breaks the joined Arabic script — remove everywhere in Farsi */
+html[lang="fa"] * { letter-spacing: 0 !important; }
+/* faux-italic looks wrong on Farsi letters; keep the gold colour, drop the slant */
+html[lang="fa"] .hero h1 em,
+html[lang="fa"] .brand-name em { font-style: normal; }
+html[lang="fa"] .marquee-track { font-style: normal; }
+html[lang="fa"] h1 { font-weight: 400; }
+html[lang="fa"] h2 { font-weight: 500; }
+html[lang="fa"] h3 { font-weight: 600; }
+
+/* --- mirrored layout --- */
+[dir="rtl"] .nav-menu a:not(.nav-cta)::after {
+  left: auto; right: 14px; transform-origin: right;
+}
+[dir="rtl"] .hero-drape svg { transform: scaleX(-1); }
+[dir="rtl"] .hero-float.f1 { right: auto; left: 12%; }
+[dir="rtl"] .hero-float.f2 { right: auto; left: 24%; }
+[dir="rtl"] .hero-float.f3 { right: auto; left: 8%; }
+[dir="rtl"] .lightbox-close { right: auto; left: 14px; }
+[dir="rtl"] .card-cta::after { content: "←"; }
+[dir="rtl"] .scroll-cue-line { background: linear-gradient(transparent, var(--gold-2)); animation-direction: reverse; }
+
+/* emails / phone numbers are Latin — keep them left-to-right inside RTL text */
+[dir="rtl"] [data-info="phone"], [dir="rtl"] [data-info="email"] { direction: ltr; unicode-bidi: isolate; display: inline-block; }
+[dir="rtl"] .notify-form input { direction: ltr; text-align: left; }
+[dir="rtl"] .notify-form input::placeholder { text-align: left; }
